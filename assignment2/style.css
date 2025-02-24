@@ -1,0 +1,98 @@
+
+* {
+    font-family: 'Roboto', sans-serif;
+    background-color: lightyellow;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: red;
+    text-align: center;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+p {
+    color: blue;
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.styled-div {
+    border: 2px solid green;
+    padding: 15px;
+    background-color: lightgray;
+    text-align: center;
+}
+
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+img {
+    border: 3px solid green;
+    display: block;
+    margin: 0 auto;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: black;
+    color: white;
+}
+
+.alt-row {
+    background-color: lightgreen;
+}
+
+#custom-list {
+    list-style-type: circle;
+    text-align: center;
+}
+
+#custom-list li {
+    font-style: italic;
+    display: inline;
+    margin: 10px;
+}
+
+#custom-list a {
+    text-decoration: none;
+}
+
+#custom-list a:link { color: blue; }
+#custom-list a:visited { color: purple; }
+#custom-list a:hover { color: red; }
+#custom-list a:active { color: orange; }
+
+.styled-button {
+    background-color: orange;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.styled-button:hover {
+    background-color: darkorange;
+}
