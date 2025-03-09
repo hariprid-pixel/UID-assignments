@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Assignment 4</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Font sizes for different screen widths */
+        h1 {
+            font-size: 32px;
+        }
+        p {
+            font-size: 18px;
+        }
+        
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+
+        /* Button styles for different screen sizes */
+        .btn {
+            padding: 12px 24px;
+            font-size: 18px;
+        }
+
+        @media (max-width: 800px) {
+            .btn {
+                padding: 8px 16px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .btn {
+                padding: 6px 12px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body class="container text-center mt-5">
+    <h1>Responsive Media Query Example</h1>
+    <p>This text and heading will adjust based on screen size.</p>
+    
+    <button class="btn btn-primary">Primary</button>
+    <button class="btn btn-secondary">Secondary</button>
+    <button class="btn btn-info">Info</button>
+
+    <form class="mt-5 text-left">
+        <h2>Place your orders here</h2>
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" class="form-control" placeholder="Enter your full name">
+
+        <label class="mt-2">Gender:</label><br>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" class="form-control" placeholder="Enter your email">
+
+        <label for="meal" class="mt-2">Meal type:</label>
+        <select id="meal" class="form-control">
+            <option>Breakfast</option>
+            <option>Lunch</option>
+            <option>Dinner</option>
+        </select>
+
+        <label for="favorite" class="mt-2">Choose your favorite:</label>
+        <select id="favorite" class="form-control">
+            <option>Select Meal</option>
+            <option>Pizza</option>
+            <option>Burger</option>
+            <option>Pasta</option>
+        </select>
+
+        <label for="photo" class="mt-2">Customer's photo with food:</label>
+        <input type="file" id="photo" class="form-control">
+
+        <label for="feedback" class="mt-2">Your feedback here:</label>
+        <textarea id="feedback" class="form-control" placeholder="Enter your message here"></textarea>
+
+        <button type="submit" class="btn btn-success mt-3">Submit</button>
+        <button type="reset" class="btn btn-danger mt-3">Reset</button>
+    </form>
+</body>
+</html>
