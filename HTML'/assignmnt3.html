@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="grid.css">
+</head>
+
+<body>
+    <style>
+        *{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto 1.5fr;
+    width: 60%;
+    margin: auto;
+}
+
+span {
+    background: green;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.first {
+    grid-column: span 3;
+}
+
+.big {
+    height: 190px;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr auto;
+    gap: 2px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    background: black;
+}
+
+.grid2 div {
+    background: pink;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+.grid2 div:first-child {
+    grid-column: span 3;
+}
+
+.grid2 div:nth-child(2) {
+    grid-column: span 3;
+    height: 200px;
+}
+
+.grid3 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 2px;
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+    background: black;
+}
+
+.grid3 div {
+    background: pink;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+.grid3 div:first-child {
+    grid-column: span 2;
+}
+
+.grid3 div:nth-child(4) {
+    grid-column: span 2;
+}
+
+.grid4 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 1fr 1fr;
+    gap: 2px;
+    width: 80%;
+    height: 400px;
+    margin: auto;
+    text-align: center;
+    background: black;
+}
+
+.grid4 div {
+    background: #ADFF2F;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+.grid4 div:first-child {
+    grid-column: span 2;
+}
+
+.grid4 div:nth-child(2) {
+    grid-row: span 2;
+}
+
+.grid4 div:nth-child(3) {
+    grid-row: span 1;
+}
+
+.grid4 div:nth-child(4) {
+    grid-row: span 1;
+}
+
+    </style> 
+        
+    <div class="grid">
+        <span class="first">1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span class="big">5</span>
+        <span class="big">6</span>
+        <span class="big">7</span>
+    </div>
+    <br>
+
+    <div class="grid2">
+        <div>Header</div>
+        <div>Landing Page</div>
+        <div>About Us</div>
+        <div>Vision</div>
+        <div>Contact</div>
+    </div>
+    <br>
+
+    <div class="grid3">
+        <div>Header</div>
+        <div>Abstract</div>
+        <div>Main Content</div>
+        <div>Footer</div>
+    </div>
+    <br>
+    
+    <div class="grid4">
+        <div>Header</div>
+        <div>Left Main</div>
+        <div>Aside2</div>
+        <div>Aside1</div>
+    </div>
+</body>
+
+</html>
