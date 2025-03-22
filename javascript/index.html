@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Assignment 5</title>
+    <script>
+        // Pattern Printing
+        function printPattern() {
+            let pattern = "";
+            for (let i = 1; i <= 3; i++) {
+                pattern += "*".repeat(i) + "<br>";
+            }
+            document.getElementById("pattern").innerHTML = pattern;
+        }
+
+        // Factorial Function
+        function findFactorial() {
+            let num = parseInt(prompt("Enter a number:"));
+            function factorial(n) {
+                return n === 0 ? 1 : n * factorial(n - 1);
+            }
+            let result = factorial(num);
+            console.log("Factorial:", result);
+            alert("Factorial: " + result);
+        }
+
+        // Capitalize first letter of each word
+        function capitalizeWords() {
+            let sentence = prompt("Enter a sentence:");
+            let capitalized = sentence.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
+            document.getElementById("capitalized").innerText = capitalized;
+        }
+
+        // Temperature Categorization
+        function categorizeTemperature() {
+            let temp = parseInt(prompt("Enter temperature:"));
+            let category = temp < 0 ? "Freezing" : temp <= 15 ? "Cold" : temp <= 30 ? "Moderate" : "Hot";
+            alert("Temperature Category: " + category);
+        }
+
+        // Days until New Year
+        function daysUntilNewYear() {
+            let today = new Date();
+            let newYear = new Date(today.getFullYear() + 1, 0, 1);
+            let diff = Math.ceil((newYear - today) / (1000 * 60 * 60 * 24));
+            document.getElementById("newyear").innerText = `Days until New Year: ${diff}`;
+        }
+
+        // Find index of 'locate'
+        function findLocateIndex() {
+            let str = "Please locate where 'locate' occurs!";
+            let index = str.indexOf("locate");
+            document.getElementById("locate").innerText = `Index of 'locate': ${index}`;
+        }
+
+        // Random Number and Fibonacci Sequence
+        function fibonacciNumbers() {
+            let num = Math.floor(Math.random() * 10) + 1;
+            document.getElementById("random").innerText = `Random Number: ${num}`;
+            let fib = [0, 1];
+            while (fib[fib.length - 1] + fib[fib.length - 2] < num) {
+                fib.push(fib[fib.length - 1] + fib[fib.length - 2]);
+            }
+            document.getElementById("fibonacci").innerText = `Fibonacci Numbers: ${fib.join(", ")}`;
+        }
+
+        // Find highest value in array
+        function highestValue() {
+            let arr = [34, 12, 78, 56, 89, 23];
+            let max = Math.max(...arr);
+            document.getElementById("maxvalue").innerText = `Highest Value: ${max}`;
+        }
+
+        // Book Object
+        function bookOperations() {
+            let books = [
+                { title: "Book 1", author: "Mahatma Gandhi", cost: 600 },
+                { title: "Book 2", author: "Author 2", cost: 450 },
+                { title: "Book 3", author: "Author 3", cost: 700 }
+            ];
+            let expensiveBooks = books.filter(book => book.cost > 500).map(book => book.title).join(", ");
+            let gandhiBook = books.find(book => book.author === "Mahatma Gandhi");
+            document.getElementById("books").innerText = `Expensive Books: ${expensiveBooks}`;
+            document.getElementById("gandhibook").innerText = `Book by Mahatma Gandhi: ${gandhiBook ? gandhiBook.title : "Not Found"}`;
+        }
+    </script>
+</head>
+<body onload="printPattern(); daysUntilNewYear(); findLocateIndex(); highestValue(); bookOperations();">
+    <h2>JavaScript Assignment 5</h2>
+    <p><b>Pattern:</b></p>
+    <p id="pattern"></p>
+    <button onclick="findFactorial()">Find Factorial</button>
+    <button onclick="capitalizeWords()">Capitalize Words</button>
+    <p id="capitalized"></p>
+    <button onclick="categorizeTemperature()">Categorize Temperature</button>
+    <p id="newyear"></p>
+    <p id="locate"></p>
+    <button onclick="fibonacciNumbers()">Generate Fibonacci</button>
+    <p id="random"></p>
+    <p id="fibonacci"></p>
+    <p id="maxvalue"></p>
+    <p id="books"></p>
+    <p id="gandhibook"></p>
+</body>
+</html>
