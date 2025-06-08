@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Categorizer</title>
+</head>
+<body>
+    <h2>Check Temperature Category</h2>
+    <button onclick="checkTemperature()">Check</button>
+
+    <script>
+    function checkTemperature() {
+        let temp = prompt("Enter temperature:");
+        
+        if (temp === null) {
+            alert("Input cancelled.");
+            return;
+        }
+
+        temp = parseFloat(temp);
+
+        if (isNaN(temp)) {
+            alert("Please enter a valid number.");
+            return;
+        }
+
+        let category = "";
+
+        if (temp < 0) {
+            category = "Freezing";
+        } else if (temp >= 0 && temp <= 15) {
+            category = "Cold";
+        } else if (temp >= 16 && temp <= 30) {
+            category = "Moderate";
+        } else {
+            category = "Hot";
+        }
+
+        alert("Temperature category: " + category);
+        console.log("Temperature category: " + category);
+    }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number Guessing Game</title>
+</head>
+<body>
+  <h2>Guess the number between 1 to 10</h2>
+  <input type="text" id="guessInput">
+  <button onclick="checkGuess()">Guess</button>
+  <p id="message"></p>
+  <p id="attempts">Number of attempts: 0</p>
+
+  <script>
+    const correctNumber = Math.floor(Math.random() * 10) + 1;
+    let attempts = 0;
+
+    function checkGuess() {
+      const userGuess = parseInt(document.getElementById('guessInput').value);
+      attempts++;
+      const messageEl = document.getElementById('message');
+      const attemptsEl = document.getElementById('attempts');
+
+      if (userGuess === correctNumber) {
+        messageEl.textContent = "Congratulations! You guessed it right.";
+      } else {
+        messageEl.textContent = "Try again!";
+      }
+
+      attemptsEl.textContent = `Number of attempts: ${attempts}`;
+    }
+  </script>
+</body>
+</html>

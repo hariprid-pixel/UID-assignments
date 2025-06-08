@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query Selector Example</title>
+</head>
+<body>
+
+<h2>Menu</h2>
+
+<ul>
+    <li class="menu-item" data-menu="true">Home</li>
+    <li class="menu-item" data-menu="false">About</li>
+    <li class="menu-item" data-menu="true">Services</li>
+    <li class="menu-item" data-menu="true">Contact</li>
+</ul>
+
+<script>
+
+    const menuItems = document.querySelectorAll('.menu-item[data-menu="true"]');
+
+    console.log("Matching menu items:");
+    menuItems.forEach(item => console.log(item.textContent));
+</script>
+
+</body>
+</html>

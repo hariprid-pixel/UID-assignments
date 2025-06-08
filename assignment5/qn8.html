@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Toggle Button Text</title>
+</head>
+<body>
+
+<button id="toggleBtn" onclick="toggleText()">Show</button>
+
+<script>
+  function toggleText() {
+    const btn = document.getElementById('toggleBtn');
+    if (btn.innerText === 'Show') {
+      btn.innerText = 'Hide';
+    } else {
+      btn.innerText = 'Show';
+    }
+  }
+</script>
+
+</body>
+</html>

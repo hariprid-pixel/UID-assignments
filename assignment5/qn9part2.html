@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reveal Button Name</title>
+</head>
+<body>
+  <h3>You have selected</h3>
+  <p id="selected"></p>
+  <button onclick="reveal('HTML')">HTML</button>
+  <button onclick="reveal('Javascript')">Javascript</button>
+  <button onclick="reveal('CSS')">CSS</button>
+
+  <script>
+    function reveal(buttonName) {
+      document.getElementById('selected').textContent = buttonName;
+    }
+  </script>
+</body>
+</html>
